@@ -418,12 +418,12 @@
 			<source src="opening.mp3" type="audio/mpeg">
 			Your browser does not support the audio element.
 		</audio>
-		<div class="preload">PLEASE WAIT</div>
+		<div class="preload">MEMUAT HALAMAN</div>
 		<div class="vidcont myoverlay">
 			<div class="divvideo">
 				<video id="myVideo" width="100%" height="100%">
 				  <source src="https://raw.githubusercontent.com/l4rms/index/master/video.mp4" type="video/mp4">
-				  Your browser doe`s not support HTML5 video.
+				  Browser kamu tidak support HTML5 video.
 				</video>
 			</div>
 		</div>
@@ -449,10 +449,10 @@
 				</div>
 				<div class="mybody">
 					<div class="mytitle">
-						Isi identitas anda terlebih dahulu
+						Isi aja nama kamu
 					</div>
 					<div class="mycontent">
-						Tekan tombol merah untuk reset nama.<br><br>
+						Tekan tombol merah untuk reset.<br><br>
 						Nama :
 						<input class="mytext" type="text" id="mynama" name="nama">
 					</div>
@@ -472,7 +472,7 @@
 				</div>
 				<div class="mybody">
 					<div class="mytitle">
-						Aku sejak lama suka padamu.
+						Klik OK untuk melanjutkan.
 					</div>
 					<div class="mycontent">
 						Maukah kau menjadi orang yang selalu ada disisiku, yang selalu ada disaat senang ataupun susah, yang selalu ada sampai akhir hayatku?
@@ -730,7 +730,7 @@
 					selesai=false;
 					$('.ucapan').text('');
 					$('.ucapan *').remove();
-					$(".ucapan").append("<input type='text' id='textcari' style='background:#00000000; width:300px; transform:translateX(-70px); color:#000; outline: none; box-sizing:border-box; border: 0px solid #000; font-size:20px' placeholder='cari di sini' autofocus></input><span class='tombolcari'; style='transition: all ease 0.3s; border-radius:10px; width:60px; height:50px; top:calc(50% - 25px); right:90px; line-height:50px; position:absolute;' onclick='cariok()'>cari</span><span class='tombolcari'; style='transition: all ease 0.3s; border-radius:10px; width:60px; height:50px; top:calc(50% - 25px); right:20px; line-height:50px; position:absolute;' onclick='caribatal()'>batal</span>");
+					$(".ucapan").append("<input type='text' id='textcari' style='background:#00000000; width:300px; transform:translateX(-70px); color:#000; outline: none; box-sizing:border-box; border: 0px solid #000; font-size:20px' placeholder='google search...' autofocus></input><span class='tombolcari'; style='transition: all ease 0.3s; border-radius:10px; width:60px; height:50px; top:calc(50% - 25px); right:90px; line-height:50px; position:absolute;' onclick='cariok()'>cari</span><span class='tombolcari'; style='transition: all ease 0.3s; border-radius:10px; width:60px; height:50px; top:calc(50% - 25px); right:20px; line-height:50px; position:absolute;' onclick='caribatal()'>batal</span>");
 					document.querySelector('#textcari').addEventListener('keyup', function (e) {
 					    if (e.key === 'Enter') {
 				      		cariok();
@@ -759,12 +759,12 @@
 				var today = new Date();
 				var h = today.getHours();
 				if(h>23)tulis('malam','seharusnya kamu sudah tidur');
-				else if(h>19)tulis('malam','waktunya mengisi energi');
-				else if(h>18)tulis('petang','selamat menikmati senja');
+				else if(h>19)tulis('malam','sudah waktunya istirahat');
+				else if(h>18)tulis('petang','jangan lupa sholat maghrib');
 				else if(h>14)tulis('sore','selamat menjalani hari');
-				else if(h>13)tulis('siang','tetap semangat')
-				else if(h>9)tulis('siang','selamat bekerja')
-				else if(h>4)tulis('pagi','selamat beraktivitas');
+				else if(h>12)tulis('siang','jangan lupa sholat dzuhur')
+				else if(h>7)tulis('siang','selamat beraktivitas')
+				else if(h>4)tulis('pagi','jangan lupa sholat shubuh');
 				else tulis('malam','seharusnya kamu sudah tidur');
 				selesai=true;
 			}
@@ -798,13 +798,13 @@
 				var t = setTimeout(startTime, 500);
 				mytanggal();
 				if(cari){
-					if(h>23)tulis('malam','seharusnya kamu sudah tidur');
-					else if(h>18)tulis('malam','waktunya mengisi energi');
-					else if(h>17)tulis('petang','selamat menikmati senja');
-					else if(h>14)tulis('sore','selamat menjalani hari');
-					else if(h>13)tulis('siang','tetap semangat')
-					else if(h>9)tulis('siang','selamat bekerja')
-					else if(h>4)tulis('pagi','selamat beraktivitas');
+				if(h>23)tulis('malam','seharusnya kamu sudah tidur');
+				else if(h>19)tulis('malam','sudah waktunya istirahat');
+				else if(h>18)tulis('petang','jangan lupa sholat maghrib');
+				else if(h>14)tulis('sore','selamat menjalani hari');
+				else if(h>12)tulis('siang','jangan lupa sholat dzuhur')
+				else if(h>7)tulis('siang','selamat beraktivitas')
+				else if(h>4)tulis('pagi','jangan lupa sholat shubuh');
 					else tulis('malam','seharusnya kamu sudah tidur');
 					if(h>18)     document.querySelector('img').src="wp1.png";
 					else if(h>4) document.querySelector('img').src="wp2.png";
